@@ -1,4 +1,4 @@
-from colorama import Fore
+from colorama import Fore, init
 from typing import Union
 
 
@@ -52,6 +52,8 @@ class Calculator:
 
 
 def main():
+    init()
+    
     calc = Calculator()
     while calc:
         calc.number_1 = calc.get_number(Fore.CYAN + 'Enter the first number: ')
